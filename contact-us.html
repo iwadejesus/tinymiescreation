@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TinymiesCreation - Contact Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #f1f8e9, #e8f5e9);
+      color: #2e4d2c;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #81c784;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      background-color: #66bb6a;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav a:hover {
+      background-color: #43a047;
+      transform: scale(1.05);
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      background-color: #a5d6a7;
+      border-bottom: 5px solid #81c784;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #1b5e20;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #33691e;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #ffffffcc;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #81c784;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      background-color: #66bb6a;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #43a047;
+      transform: scale(1.05);
+    }
+
+    .confirmation {
+      text-align: center;
+      margin-top: 1rem;
+      color: #2e7d32;
+      font-weight: bold;
+      display: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #c8e6c9;
+      color: #2e4d2c;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tutorials.html">Tutorials</a>
+    <a href="examples.html">Examples</a>
+    <a href="tips.html">Tips</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <header>
+    <h1>🌿 Contact Us</h1>
+    <p>We’d love to hear from you! Send us your questions, ideas, or crochet stories.</p>
+  </header>
+
+  <div class="contact-form">
+    <form id="contactForm">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="confirmation" id="confirmationMessage">
+      🌸 Thank you for reaching out! We’ll get back to you soon.
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 TinymiesCreation. Crafted with love and yarn.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const confirmation = document.getElementById("confirmationMessage");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      confirmation.style.display = "block";
+      form.reset();
+    });
+  </script>
+</body>
+</html>
