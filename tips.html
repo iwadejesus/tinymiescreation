@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TinymiesCreation - Tips</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #f1f8e9, #e8f5e9);
+      color: #2e4d2c;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #81c784;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      background-color: #66bb6a;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav a:hover {
+      background-color: #43a047;
+      transform: scale(1.05);
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      background-color: #a5d6a7;
+      border-bottom: 5px solid #81c784;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #1b5e20;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #33691e;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .tips-container {
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+
+    .tip {
+      background: #ffffffcc;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .tip-header {
+      padding: 1rem;
+      cursor: pointer;
+      background-color: #66bb6a;
+      color: white;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .tip-header:hover {
+      background-color: #43a047;
+    }
+
+    .tip-content {
+      display: none;
+      padding: 1rem;
+      background-color: #f9fbe7;
+      color: #2e4d2c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #c8e6c9;
+      color: #2e4d2c;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tutorials.html">Tutorials</a>
+    <a href="examples.html">Examples</a>
+    <a href="tips.html">Tips</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <header>
+    <h1>🌿 Crochet Tips</h1>
+    <p>Helpful advice to make your crochet journey smoother and more enjoyable.</p>
+  </header>
+
+  <div class="tips-container">
+    <div class="tip">
+      <div class="tip-header">Start with Simple Stitches</div>
+      <div class="tip-content">
+        Begin with chain and single crochet stitches. These basics will help you build confidence and control.
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-header">Choose the Right Yarn</div>
+      <div class="tip-content">
+        Soft, medium-weight yarn is best for beginners. It’s easier to handle and shows stitches clearly.
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-header">Practice Tension Control</div>
+      <div class="tip-content">
+        Keep your stitches consistent. Not too tight, not too loose — steady tension makes your work neat.
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-header">Use Stitch Markers</div>
+      <div class="tip-content">
+        Stitch markers help you keep track of rounds and prevent mistakes when working on small projects.
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-header">Enjoy the Process</div>
+      <div class="tip-content">
+        Crochet is like tending a garden — take your time, relax, and enjoy each stitch you make.
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 TinymiesCreation. Crafted with love and yarn.</p>
+  </footer>
+
+  <script>
+    const tipHeaders = document.querySelectorAll(".tip-header");
+    tipHeaders.forEach(header => {
+      header.addEventListener("click", () => {
+        const content = header.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>
